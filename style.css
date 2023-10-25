@@ -1,0 +1,9 @@
+.background{
+    height:80%;
+    width: 100%;
+}
+.card {
+    width:24%;
+    background-color: antiquewhite;
+    height:100px;
+}

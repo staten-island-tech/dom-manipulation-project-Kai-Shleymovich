@@ -1,6 +1,7 @@
 const DOMSelectors = {
   form: document.getElementById('form'),
-  input: document.getElementById('colors')
+  nameinput: document.getElementById('color_name'),
+  hexinput: document.getElementById('colors')
 };
 DOMSelectors.form.addEventListener('submit',function(e){
   e.preventDefault()
