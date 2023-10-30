@@ -1,9 +1,11 @@
 .background{
     height:80%;
     width: 100%;
+    border-bottom: 10000px ;
 }
 .card {
     width:24%;
     background-color: antiquewhite;
     height:100px;
+
 }
