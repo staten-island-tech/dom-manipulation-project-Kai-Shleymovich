@@ -8,19 +8,29 @@ const DOMSelectors = {
 };
 DOMSelectors.form.addEventListener('submit',function(e){
   e.preventDefault()
-  DOMSelectors.selector.insertAdjacentHTML(
-    "beforeend",
-    `      <div class="card">
+  function makecard(){
+    return `      <div class="card">
     <h2>${DOMSelectors.nameinput.value}</h2>
     <div class="background" style="background-color:${DOMSelectors.hexinput.value}"></div>
     <p>${DOMSelectors.person_name_input.value}</p>
     
     <button class="delbutton">Delete</button>
-  </div>`,
-  );
+  </div>`
+  }
+  function insertcard() {
+    DOMSelectors.selector.insertAdjacentHTML(
+      "beforeend",
+      makecard()
+    );
+  }
+  insertcard()
+  DOMSelectors.nameinput.value = ""
+  DOMSelectors.hexinput.value=""
+  DOMSelectors.person_name_input.value=""
 });
-DOMSelectors.selector.addEventListener("click",function(e){
-  if(e.target.classList.contains('delbutton')){
-    e.target.parentElement.remove();
+DOMSelectors.selector.addEventListener("click",function(del){
+  if(del.target.classList.contains('delbutton')){
+    del.target.parentElement.remove();
   }
 })
+
