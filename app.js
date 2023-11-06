@@ -1,6 +1,6 @@
 const DOMSelectors = {
   form: document.getElementById('form'),
-  nameinput: document.getElementById('color_name'),
+  color_name_input: document.getElementById('color_name'),
   person_name_input: document.getElementById('name'),
   hexinput: document.getElementById('colors'),
   selector: document.querySelector(".flex-wrapper"),
@@ -10,7 +10,7 @@ DOMSelectors.form.addEventListener('submit',function(e){
   e.preventDefault()
   function makecard(){
     return `      <div class="card">
-    <h2>${DOMSelectors.nameinput.value}</h2>
+    <h2>${DOMSelectors.color_name_input.value}</h2>
     <div class="background" style="background-color:${DOMSelectors.hexinput.value}"></div>
     <p>${DOMSelectors.person_name_input.value}</p>
     
