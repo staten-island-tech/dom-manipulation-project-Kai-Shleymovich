@@ -8,6 +8,7 @@ const DOMSelectors = {
 };
 DOMSelectors.form.addEventListener('submit',function(e){
   e.preventDefault()
+  
   function makecard(){
     return `      <div class="card">
     <h2>${DOMSelectors.color_name_input.value}</h2>
